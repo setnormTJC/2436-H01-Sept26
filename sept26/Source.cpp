@@ -27,12 +27,11 @@ int binarySearch(std::vector<int> sortedNums, int searchValue)
 	bool found = false;
 	int first = 0;
 	int last = sortedNums.size() - 1;
-	int middle = 0;
+	int middle = (first + last)/2;
 
 	while (first <= last and !found)
 	{
 		//nums = 11, 22, 33, 44, 55 (searching for 66) 
-		int middle = (first + last) / 2; //use ceil() or floor() for odd lengths … be cautious
 		//first while loop iter: middle = (0 + 4) /2 = 2 
 		if (sortedNums[middle] == searchValue) //33 == 66?
 		{
@@ -46,6 +45,9 @@ int binarySearch(std::vector<int> sortedNums, int searchValue)
 		{
 			first = middle + 1;
 		}
+	
+		middle = (first + last) / 2; //use ceil() or floor() for odd lengths … be cautious
+	
 	}//end while
 	if (found)
 	{
@@ -69,7 +71,7 @@ int main()
 	//targetValue = "cheeseburgers"; //O(N/2)
 	vector<int> sortedNums = { 11, 22, 33, 44, 55, 66, 77, 88 };
 
-	int targetValue = 33; 
+	int targetValue = 88; 
 	cout << "Found? the element " << targetValue << " at index: " 
 		<< binarySearch(sortedNums, targetValue);
 
