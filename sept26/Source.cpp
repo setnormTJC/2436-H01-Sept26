@@ -5,8 +5,13 @@ using namespace std;
 
 
 //BRUTE FORCE!
-template <typename T> 
-int sequentialSearch(vector<T> list, T targetValue)
+
+
+
+
+gjhfkjgkjhgkjh
+
+int sequentialSearch(vector<int> list, T targetValue)
 {
 	for (int i = 0; i < list.size(); i++)
 	{
@@ -76,7 +81,7 @@ int binarySearch(std::vector<int> sortedNums, int searchValue)
 
 		}
 	
-		middle = (first + last) / 2; //use ceil() or floor() for odd lengths … be cautious
+		middle = (first + last) / 2; //use ceil() or floor() for odd lengths â€¦ be cautious
 
 
 
